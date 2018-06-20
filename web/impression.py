@@ -1,3 +1,6 @@
+import json
+
+
 class Impression(object):
     """
     Class designed to model all of the important information
@@ -17,3 +20,22 @@ class Impression(object):
 
     def referer(self):
         return self._referer
+
+
+def create_impression_from_json(impression_string):
+    """
+    Function to turn a string in to a Impression object
+
+    :param impression_string: `string` string representation of an impression
+    :return: `Impression`
+    """
+
+    impression_json = json.loads(impression_string)
+
+    headers = impression_json['headers']
+
+    referer = headers.get('Referer')
+    domain = impression_json.get('page_domain')
+
+    impression = Impression(referer, domain)
+    return impression

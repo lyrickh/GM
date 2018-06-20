@@ -1,27 +1,7 @@
-import json
-from impression import Impression
+from impression import create_impression_from_json
 
 
 _FAKE_DB = set()
-
-
-def create_impression_from_json(impression_string):
-    """
-    Function to turn a string in to a Impression object
-
-    :param impression_string: `string` string representation of an impression
-    :return: `Impression`
-    """
-
-    impression_json = json.loads(impression_string)
-
-    headers = impression_json['headers']
-
-    referer = headers.get('Referer')
-    domain = impression_json.get('page_domain')
-
-    impression = Impression(referer, domain)
-    return impression
 
 
 def read_from_file(fileName):

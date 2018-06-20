@@ -1,4 +1,4 @@
-from web.read_file_dump import create_impression_from_json
+from web.impression import create_impression_from_json
 
 
 def test_create_impression():
