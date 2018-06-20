@@ -4,17 +4,17 @@ from impression import create_impression_from_json
 _FAKE_DB = set()
 
 
-def read_from_file(fileName):
+def read_from_file(file_name):
     """
     Loads in a file of newline separated json objects, converts to Impressions and adds
     to the RAM cache
 
-    :param fileName: `string` file of json impressions to be read
+    :param file_name: `string` file of json impressions to be read
     :return:
     """
     global _FAKE_DB
 
-    with open(fileName) as f:
+    with open(file_name) as f:
         content = f.read()
     string_impressions = content.split("\n")
 

@@ -13,7 +13,9 @@ class Impression(object):
         return hash((self._referer, self._domain))
 
     def __eq__(self, other):
-        return self._referer == other._referer and self._domain == other._domain
+        if type(self) != type(other):
+            return False
+        return self.referer() == other.referer() and self.domain() == other.domain()
 
     def domain(self):
         return self._domain
