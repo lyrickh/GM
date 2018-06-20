@@ -3,9 +3,6 @@ from impression import create_impression_from_json
 from db import add_impression
 
 
-_FAKE_DB = set()
-
-
 def read_from_file(file_name):
     """
     Loads in a file of newline separated json objects, converts to Impressions and adds
@@ -26,4 +23,4 @@ def read_from_file(file_name):
 
 
 if __name__ == "__main__":
-    read_from_file("./example/impressions-shortlist")
+    read_from_file("../example/impressions-shortlist")
