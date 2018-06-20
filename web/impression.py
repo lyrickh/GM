@@ -11,3 +11,9 @@ class Impression(object):
 
     def __eq__(self, other):
         return self._referer == other._referer and self._domain == other._domain
+
+    def domain(self):
+        return self._domain
+
+    def referer(self):
+        return self._referer

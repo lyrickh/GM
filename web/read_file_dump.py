@@ -9,7 +9,7 @@ def create_impression_from_json(impression_string):
     """
     Function to turn a string in to a Impression object
 
-    :param impression_json: `string` string representation of an impression
+    :param impression_string: `string` string representation of an impression
     :return: `Impression`
     """
 

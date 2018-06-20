@@ -3,7 +3,7 @@
 Reads in a file of json objects to be converted in to Impressions and stored in the RAM - data will not persist between 
 runs
 
-##Installation Instructions
+## Installation Instructions
 
 1. cd to the project directory (MG)
 2. run cmd "docker build -t python mg ."
